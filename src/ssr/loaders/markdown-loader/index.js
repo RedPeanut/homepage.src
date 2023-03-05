@@ -37,8 +37,8 @@ const md = (linkPrefix, shouldPrefix) =>
   }).use(require('markdown-it-replace-link'))
 
 module.exports = function(content) {
-  console.log('');
-  console.log('markdown-loader() is called...')
+  // console.log('');
+  // console.log('markdown-loader() is called...')
   this.cacheable()
 
   const query = loaderUtils.parseQuery(this.query)
