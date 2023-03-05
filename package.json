@@ -5,19 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run start_local",
+    "start": "yarn start_local",
     "start_local": "NODE_ENV=development BUILD_ENV=local webpack-dev-server --progress --env local --colors",
     "start_prod": "NODE_ENV=production BUILD_ENV=prod webpack-dev-server --progress --env prod --colors",
-    "build": "npm run build_local",
+    "build": "yarn build_local",
     "build_local": "rm -rf local && NODE_ENV=development BUILD_ENV=local webpack --env local --progress --color",
     "build_prod": "rm -rf prod && NODE_ENV=production BUILD_ENV=prod webpack --env prod --progress --color",
-    "publish": "npm run build_prod && ts-node scripts/publish.ts"
+    "publish": "yarn build_prod && ts-node scripts/publish.ts"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@types/gh-pages": "3.2.1",
+
+    "//": "app",
     "babel-cli": "6.14.0",
     "babel-core": "6.14.0",
     "babel-loader": "6.2.5",
@@ -30,7 +31,6 @@
     "excerpt-html": "1.2.2",
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "0.11.2",
-    "gh-pages": "3.1.0",
     "history": "2.1.1",
     "html-webpack-plugin": "2.22.0",
     "img-loader": "2.0.0",
@@ -47,6 +47,12 @@
     "webpack-merge": "2.6.1",
     "webpack-parallel-uglify-plugin": "0.4.2",
     
+    "//": "publish",
+    "@types/gh-pages": "3.2.1",
+    "@types/node": "12",
+    "gh-pages": "3.1.0",
+    
+    "//": "ssr",
     "front-matter": "2.1.0",
     "highlight.js": "9.10.0",
     "html-frontmatter": "1.6.0",
@@ -58,6 +64,7 @@
     "toml-loader": "1.0.0"
   },
   "dependencies": {
+    "//": "app",
     "immutable": "3.8.2",
     "moment": "2.18.1",
     "prop-types": "15.6.1",
