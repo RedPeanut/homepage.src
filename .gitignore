@@ -1,0 +1,10 @@
+#
+.idea/
+cache/
+local/
+dev/
+prod/
+node_modules/
+
+#
+package-lock.json
