@@ -76,10 +76,11 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .markdown-body h1 {font-size:200%;margin-top:1.5em;margin:1.5em 0px 0.67em;}
 .markdown-body a {color:blue;}
 .markdown-body a:hover {text-decoration:underline;}
-.markdown-body p {}
+.markdown-body p {margin-bottom:12px;}
 .markdown-body figure figcaption {text-align:center;}
-.markdown-body ul {padding-left:40px;}
+.markdown-body ul, .markdown-body ol {margin:12px 0; padding-left:40px;}
 .markdown-body ul li {list-style:disc;}
+.markdown-body ol li {list-style:decimal;}
 
 .markdown-body h1 {font-size: 2em;}
 .markdown-body h2 {font-size: 1.5em;}
