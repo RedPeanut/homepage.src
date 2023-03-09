@@ -11,7 +11,7 @@ const common = merge([
       app: ['babel-polyfill', path.resolve(__dirname, 'src/app/app.js')]
     },
     output: {
-      path: path.resolve(__dirname, process.env.NODE_ENV),
+      path: path.resolve(__dirname, process.env.NODE_ENV === 'production' ? 'prod' : 'dev'),
       filename: '[name].js',
       chunkFilename: '[name].js',
     },
@@ -122,7 +122,7 @@ const common = merge([
   },
 ]);
 
-function production() {
+function production(env) {
   return merge([
     common,
     {
@@ -150,7 +150,7 @@ function production() {
   ])
 }
 
-function development() {
+function development(env) {
   return merge([
     common,
     {
@@ -174,7 +174,7 @@ function development() {
 
 module.exports = function(env) {
   if(env === 'prod')
-    return production();
+    return production(env);
   else
-    return development();
+    return development(env);
 };
