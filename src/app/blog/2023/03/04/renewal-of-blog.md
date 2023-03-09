@@ -22,14 +22,9 @@ ssr(Static Site geneRation)의 주요 동작은 로더를 통한 markdown 파일
 ## Prologue
 남이 만든 코드를 한땀 한땀 따라해보는 좋은 경험이었으며, 프레임워크?(웹팩,리액트)에 대한 높고 빠른 이해도와 코딩력을 갖춘 최초 창작자(<a href="https://github.com/KyleAMathews" target="_blank">Kyle Mathews</a>)에 대해 경외심을 느끼게하는 시간이었다.
 
-## 앞으로 하고 싶은것
-1. 갤러리 DIFF, DHT 페이지 작성
-1. 추가 툴 작성
-1. 광고
-1. 타입스크립트 지원
-1. 트래커 구현
-1. 빌드타임단축에 대한 고찰
-
-
-
-
+## TODO
+1. stock 엑셀 컬럼
+1. electron 개발환경구축 -> ...
+1. node 커맨드 툴
+1. 트래커 구현?
+1. 갤러리 DIFF, DHT 페이지 작성?

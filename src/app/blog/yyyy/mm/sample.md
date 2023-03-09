@@ -2,7 +2,7 @@
 title: 제목이들어갑니다
 date: 2021-01-01 12:00:00
 layout: 레이아웃명
-category: blog
+category: 
 thumbnail: 썸네일이미지.jpg
 summary: 
 tags: [태그1,태그2]
