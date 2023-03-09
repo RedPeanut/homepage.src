@@ -8,7 +8,7 @@ import {createHashHistory} from "history";
 //
 import load from "./utils/load";
 
-const globals = require("./config/" + process.env.BUILD_ENV + "/globals");
+const globals = require("./config/" + process.env.NODE_ENV + "/globals");
 const store = configureStore();
 const history = useRouterHistory(createHashHistory)({queryKey: false});
 

@@ -1,9 +1,8 @@
 #
 .idea/
 cache/
-local/
-dev/
-prod/
+development/
+production/
 node_modules/
 
 #

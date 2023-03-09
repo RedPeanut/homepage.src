@@ -11,7 +11,7 @@ const common = merge([
       app: ['babel-polyfill', path.resolve(__dirname, 'src/app/app.js')]
     },
     output: {
-      path: path.resolve(__dirname, process.env.BUILD_ENV),
+      path: path.resolve(__dirname, process.env.NODE_ENV),
       filename: '[name].js',
       chunkFilename: '[name].js',
     },
@@ -25,7 +25,6 @@ const common = merge([
         'process.env': {
           'debug': false,
           'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-          'BUILD_ENV': JSON.stringify(process.env.BUILD_ENV),
         }
       }),
     ],
