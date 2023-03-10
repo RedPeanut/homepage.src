@@ -20,10 +20,10 @@ tags: [renewal,ssr]
 ssr(Static Site geneRation)의 주요 동작은 로더를 통한 markdown 파일에 대한 변환 및 라우터 구성이다.
 
 ## Prologue
-남이 만든 코드를 한땀 한땀 따라해보는 좋은 경험이었으며, 프레임워크?(웹팩,리액트)에 대한 높고 빠른 이해도와 코딩력을 갖춘 최초 창작자(<a href="https://github.com/KyleAMathews" target="_blank">Kyle Mathews</a>)에 대해 경외심을 느끼게하는 시간이었다.
+남이 만든 코드를 한땀 한땀 따라해보는 좋은 경험이었으며, 프레임워크?(웹팩,리액트)에 대한 높고 빠른 이해도와 코딩력을 갖춘 창작자(<a href="https://github.com/KyleAMathews" target="_blank">Kyle Mathews</a>)에 대해 경외심을 느끼게하는 시간이었다.
 
-## TODO
-1. stock 엑셀 컬럼
+## TODO (-:예정,>:진행중,v:완료,x:삭제)
+1. ```-``` stock 엑셀 컬럼
 1. electron 개발환경구축 -> ...
 1. node 커맨드 툴
 1. 트래커 구현?
