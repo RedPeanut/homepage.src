@@ -7,7 +7,7 @@ class MarkdownWrapper extends React.Component {
   render () {
 
     const { route } = this.props
-    console.log('this.props = ', this.props); // working?
+    console.log('this.props = ', this.props);
     const post = route.page.data
     // console.log('post = ', post);
     const { title, date, body } = post
