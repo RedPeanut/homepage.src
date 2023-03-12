@@ -9,8 +9,8 @@
     "start_dev": "NODE_ENV=development webpack-dev-server --progress --env dev --colors",
     "start_prod": "NODE_ENV=production webpack-dev-server --progress --env prod --colors",
     "build": "yarn run build_dev",
-    "build_dev": "rm -rf development && NODE_ENV=development webpack --env dev --progress --color",
-    "build_prod": "rm -rf production && NODE_ENV=production webpack --env prod --progress --color",
+    "build_dev": "rm -rf dev && NODE_ENV=development webpack --env dev --progress --color",
+    "build_prod": "rm -rf prod && NODE_ENV=production webpack --env prod --progress --color",
     "publish": "yarn run build_prod && ts-node scripts/publish.ts"
   },
   "keywords": [],
