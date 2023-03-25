@@ -18,7 +18,7 @@ tags: [renewal,ssr]
 
 개츠비 버전 0.12.48(2017년 6월 16일) 버전 내용을 그대로 카피 했으며, 웹팩의 커스텀 로더 구성과 동작을 느껴본 시간이었다.
 
-ssr(Static Site geneRation)의 주요 동작은 로더를 통한 markdown 파일에 대한 변환 및 라우터 구성이다.
+ssr(Static Site geneRation)의 주요 동작은 로더를 통한 markdown 파일에 대한 변환 및 동적 라우터 구성이다.
 
 ## Prologue
 남이 만든 코드를 한땀 한땀 따라해보는 좋은 경험이었으며, 프레임워크?(웹팩,리액트)에 대한 높고 빠른 이해도와 코딩력을 갖춘 창작자(<a href="https://github.com/KyleAMathews" target="_blank">Kyle Mathews</a>)에 대해 경외심을 느끼게하는 시간이었다.
