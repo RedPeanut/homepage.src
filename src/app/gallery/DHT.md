@@ -1,6 +1,6 @@
 ---
 title: DHT
-date: 2022-10-09 12:00:01
+insert: 2022-10-09 12:00:01
 layout: 레이아웃명
 category: gallery
 thumbnail: 썸네일이미지.jpg

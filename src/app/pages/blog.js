@@ -14,7 +14,7 @@ class Blog extends React.Component {
   render() {
 
     // console.log('this.props = ', this.props);
-    const sortedPages = _.sortBy(this.props.route.pages, 'data.date').reverse();
+    const sortedPages = _.sortBy(this.props.route.pages, 'data.insert').reverse();
     // console.log('this.props.route.path = ', this.props.route.path);
     const visiblePages = sortedPages.filter(page => (
       _.get(page, 'data.category') === this.props.route.path // blog or gallery

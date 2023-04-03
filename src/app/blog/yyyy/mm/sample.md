@@ -1,6 +1,6 @@
 ---
 title: 제목이들어갑니다
-date: 2021-01-01 12:00:00
+insert: 2021-01-01 12:00:00
 layout: 레이아웃명
 category: 
 thumbnail: 썸네일이미지.jpg
