@@ -9,8 +9,9 @@ summary:
 tags: [renewal,ssr]
 ---
 
+## 내용
 블로그(<a href="https://github.com/RedPeanut/redpeanut.github.io.src-archived" target="_blank">예전소스</a>)를 개편했다.
-주내용은 개츠비(<a href="https://github.com/gatsbyjs/gatsby" target="_blank">링크</a>)를 걷어냈다. 개츠비를 걷어낸 주요 이유는 다음과 같다.
+주내용은 <a href="https://github.com/gatsbyjs/gatsby" target="_blank">개츠비</a>를 걷어냈다. 개츠비를 걷어낸 주요 이유는 다음과 같다.
 
 - 툴 페이지를 만들면서 웹팩 설정에 대한 직접적인 조작의 필요성을 느꼈으나 개츠비가 웹팩 설정을 감추고 있음
 - 개츠비 설정 및 디버깅에 대한 러닝커브 시간이 실무에 도움이 안된다고 (시간낭비라고) 느낌
@@ -20,16 +21,5 @@ tags: [renewal,ssr]
 
 ssr(Static Site geneRation)의 주요 동작은 로더를 통한 markdown 파일 라우터 구성과 wrapper 구성이다.
 
-## Prologue
+## Epilogue
 남이 만든 코드를 한땀 한땀 따라해보는 좋은 경험이었으며, 프레임워크?(웹팩,리액트)에 대한 높고 빠른 이해도와 코딩력을 갖춘 창작자(<a href="https://github.com/KyleAMathews" target="_blank">Kyle Mathews</a>)에 대해 경외심을 느끼게하는 시간이었다.
-
-## TODO (-:예정,>:진행중,v:완료,x:삭제,?:미정)
-1. v stock 엑셀 컬럼 조정
-1. xcode+wxWidgets 개발환경구축 -> '40인의 도둑' 최적화
-- ```-``` 점수값 분리(개발/운영)
-- ```-``` 커스텀 카드셋팅, 이동횟수 추가, 이동 기록
-1. electron 개발환경구축 -> ...
-1. ? 타입스크립트, Class to Functional
-1. ? node 커맨드 툴
-1. ? 트래커 구현
-1. ? 갤러리 DIFF, DHT 페이지 작성
