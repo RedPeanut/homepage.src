@@ -158,7 +158,7 @@ function development(env) {
         contentBase: 'src/www',
         hot: true,
         stats: 'errors-only',
-        host: 'localhost',
+        host: '0.0.0.0',
         port: '3000'
       },
       plugins: [
