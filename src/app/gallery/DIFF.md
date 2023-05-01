@@ -2,7 +2,6 @@
 title: DIFF
 insert: 2022-10-09 12:00:08
 layout: 레이아웃명
-category: gallery
 thumbnail: 썸네일이미지.jpg
 summary: 
 tags: [diff,javascript]

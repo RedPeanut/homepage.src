@@ -3,7 +3,6 @@ title: TODO
 insert: 2023-03-05 00:00
 update: 2023-04-16 00:00
 layout: 레이아웃명
-category: blog
 thumbnail: 썸네일이미지.jpg
 summary: 
 tags: [TODO]

@@ -3,7 +3,6 @@ title: 블로그를 다시 만들면서
 insert: 2023-03-04 01:30
 update: 2023-03-09 21:40
 layout: 
-category: blog
 thumbnail: 
 summary: 
 tags: [renewal,ssr]

@@ -2,7 +2,6 @@
 title: 주식생각
 insert: 2023-03-31 23:42
 layout: 레이아웃명
-category: blog
 thumbnail: 썸네일이미지.jpg
 summary: 
 tags: [주식,생각]
