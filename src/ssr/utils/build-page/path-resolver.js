@@ -9,8 +9,11 @@ module.exports = function pathResolver(relativePath, pageData) {
 
   // Remove the . from extname (.md -> md)
   data.file.ext = data.file.extname.slice(1)
+
   // Make sure slashes on parsed.dirname are correct for Windows
-  data.file.dirname = slash(data.file.dirname)
+  const dirname = slash(data.file.dirname)
+  data.file.dirname = dirname
+  data.file.firstname = dirname.split('/').length > 0 ? dirname.split('/')[0] : ''
 
   // Determine require path
   data.requirePath = slash(relativePath)

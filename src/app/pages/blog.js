@@ -17,8 +17,9 @@ class Blog extends React.Component {
     const sortedPages = _.sortBy(this.props.route.pages, 'data.insert').reverse();
     // console.log('this.props.route.path = ', this.props.route.path);
     const visiblePages = sortedPages.filter(page => (
-      _.get(page, 'data.category') === this.props.route.path // blog or gallery
-      && _.get(page, 'file.ext') === 'md' && !_.includes(page.path, '/404')
+      _.get(page, 'file.firstname') === this.props.route.path // blog or gallery
+      && _.get(page, 'file.ext') === 'md'
+      && !_.includes(page.path, '/404')
     ));
     // console.log('sortedPages = ', sortedPages);
     // console.log('visiblePages = ', visiblePages);
