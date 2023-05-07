@@ -33,20 +33,29 @@ function globQuery(directory) {
 
 let globCache
 function createCache(directory, callback) {
-  const postsData = []
-
+  
   glob(globQuery(directory), { follow: true }, (err, posts) => {
     if (err) {
       return callback(err)
     }
+    
+    const postsData = []
+    // console.log('directory = ', directory);
+    // console.log('posts = ', posts);
 
     posts.forEach(post => {
       postsData.push(buildPage(directory, post))
     })
 
-    debug(`globbed ${postsData.length} posts`)
-    globCache = postsData
-    return callback(null, postsData)
+    const resultData = postsData.filter(item => 
+      item.file.basename != 'sample.md'
+    )
+    // console.log();
+    // console.log('resultData = ', resultData);
+    
+    debug(`globbed ${resultData.length} posts`)
+    globCache = resultData
+    return callback(null, resultData)
   })
 }
 
