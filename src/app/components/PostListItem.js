@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 // import { Link } from 'gatsby'
 
 // interface Fields {
@@ -44,6 +45,7 @@ function PostListItem({
       <li className="item">
         <a href={'#/'+page.path} className="">
           <h2 className="title">{page.data.title}</h2>
+          <p className="timestamp">{moment(page.data.insert).format('YYYY년 MM월 DD일')}</p>
           {/* <p className="meta"></p> */}
           {
             page.data.excerpt && (

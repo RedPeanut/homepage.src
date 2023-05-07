@@ -10,7 +10,7 @@ class MarkdownWrapper extends React.Component {
     // console.log('this.props = ', this.props);
     const post = route.page.data
     // console.log('post = ', post);
-    const { title, date, body } = post
+    const { title, insert, body } = post
 
     return (
       // <MainLayout index={markdownRemark.frontmatter.category == 'gallery' ? 2 : 1}>
@@ -20,7 +20,7 @@ class MarkdownWrapper extends React.Component {
             <div className="main post read">
               <h1 className="title">{title}</h1>
               {/* <p className="meta">{date} • {timeToRead}분</p> */}
-              <p className="meta">{moment(date).format('YYYY년 M월 D일')}</p>
+              <p className="meta">{moment(insert).format('YYYY년 MM월 DD일')}</p>
               <div className="content markdown-body"
                 dangerouslySetInnerHTML={{ __html: body }}
               />
