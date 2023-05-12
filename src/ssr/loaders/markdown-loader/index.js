@@ -79,10 +79,11 @@ module.exports = function(content) {
     pruneLength: 200, // Amount of characters that the excerpt should contain
     pruneString: '…', // Character that will be added to the pruned string
     pruneSeparator: ' ', // Separator to be used to separate words
-})
+  });
   const result = objectAssign({}, meta.attributes, {
     body, excerpt
-  })
-  this.value = result
-  return `module.exports = ${JSON.stringify(result)}`
+  });
+  
+  this.value = result;
+  return `module.exports = ${JSON.stringify(result)}`;
 }
