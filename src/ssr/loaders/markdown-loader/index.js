@@ -80,8 +80,15 @@ module.exports = function(content) {
     pruneString: '…', // Character that will be added to the pruned string
     pruneSeparator: ' ', // Separator to be used to separate words
   });
+
+  const toc = require(`mdast-util-toc`);
+  const tocAst = toc(markdownAST);
+  const tableOfContents = tocAst.map ? generateHTML(tocAst.map) : '';
+  // console.log('tocAST = ', tocAst);
+  // console.log(generateHTML(tocAst.map));
+
   const result = objectAssign({}, meta.attributes, {
-    body, excerpt
+    body, excerpt, tableOfContents
   });
   
   this.value = result;
