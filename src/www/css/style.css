@@ -65,7 +65,8 @@ footer .wrap {max-width:1024px;margin:0 auto;}
   vertical-align: middle;
 }
 .blog .post.list .item p.meta {}
-.blog .post.list .item p.summary {}
+.blog .post.list .item p.summary {margin:8px 0;}
+
 .blog .post.read {padding:48px 8px;}
 .blog .post.read h1.title {font-size:42px;}
 .blog .post.read p.meta {color:gray;margin-bottom:42px;}
