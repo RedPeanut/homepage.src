@@ -1,12 +1,12 @@
 const frontMatter = require('front-matter')
-const markdownIt = require('markdown-it')
-const hljs = require('highlight.js')
+// const markdownIt = require('markdown-it')
+// const hljs = require('highlight.js')
 const objectAssign = require('object-assign')
 const loaderUtils = require('loader-utils')
 const path = require('path')
 const excerptHtml = require('excerpt-html')
 
-const highlight = (str, lang) => {
+/* const highlight = (str, lang) => {
   if (lang !== null && hljs.getLanguage(lang)) {
     try {
       return hljs.highlight(lang, str).value
@@ -34,7 +34,9 @@ const md = (linkPrefix, shouldPrefix) =>
       }
       return link
     },
-  }).use(require('markdown-it-replace-link'))
+  }).use(require('markdown-it-replace-link')) */
+
+const Remark = require(`remark`);
 
 module.exports = function(content) {
   // console.log('');
@@ -42,11 +44,35 @@ module.exports = function(content) {
   this.cacheable()
 
   const query = loaderUtils.parseQuery(this.query)
-  const linkPrefix = (query.config && query.config.linkPrefix) || ''
+  /* const linkPrefix = (query.config && query.config.linkPrefix) || ''
   const shouldPrefix = query.shouldPrefix
 
   const meta = frontMatter(content)
-  const body = md(linkPrefix, shouldPrefix).render(meta.body)
+  const body = md(linkPrefix, shouldPrefix).render(meta.body) */
+  
+  const meta = frontMatter(content)
+  const remarkOptions = {}
+  let remark = new Remark().data(`settings`, remarkOptions);
+  const markdownAST = remark.parse(meta.body);
+  
+  const hastToHTML = require(`hast-util-to-html`);
+  const toHAST = require(`mdast-util-to-hast`);
+  const defaultHandler = require(`mdast-util-to-hast/lib/handlers/code`);
+
+  function markdownASTToHTMLAst(ast) {
+    return toHAST(ast, {
+      allowDangerousHtml: true,
+      handlers: { code: defaultHandler },
+    });
+  }
+
+  function generateHTML(ast) { 
+    return hastToHTML(markdownASTToHTMLAst(ast), {
+      allowDangerousHtml: true,
+    });
+  }
+  const body = generateHTML(markdownAST);
+  
   const excerpt = excerptHtml(body, {
     //moreRegExp: /\s*<!--\s*more\s*-->/i, // Search for the slug
     stripTags: true, // Set to false to get html code
