@@ -14,10 +14,10 @@ class MarkdownWrapper extends React.Component {
 
     return (
       // <MainLayout index={markdownRemark.frontmatter.category == 'gallery' ? 2 : 1}>
-        <div className="blog">
+        <div className="blog read">
           <div className="wrap">
             <div className="left category list"></div>
-            <div className="main post read">
+            <div className="post">
               <h1 className="title">{title}</h1>
               {/* <p className="meta">{date} • {timeToRead}분</p> */}
               <p className="meta">{moment(insert).format('YYYY년 MM월 DD일')}</p>

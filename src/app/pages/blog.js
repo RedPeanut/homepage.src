@@ -26,10 +26,10 @@ class Blog extends React.Component {
 
     return (
       // <MainLayout index={1}>
-      <div className="blog">
+      <div className="blog list">
         <div className="wrap">
           <div className="left category list"></div>
-          <div className="main post list">
+          <div className="post">
             <ul>
               {
                 visiblePages.map((page, index) => {

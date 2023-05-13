@@ -53,10 +53,13 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .about section.career .wrap div .item .position {display:block;margin-top:16px;}
 
 .blog {}
-.blog .wrap {max-width:1024px;margin:0 auto;}
-.blog .post.list .item {margin:56px 0;}
-.blog .post.list .item h2 {color:rgb(205,85,84);margin-bottom:8px;}
-.blog .post.list .item .newwindow {
+.blog .wrap {max-width:1024px;margin:0 auto;
+  display:flex;
+  align-items: flex-start;
+}
+.blog.list .post .item {margin:56px 0;}
+.blog.list .post .item h2 {color:rgb(205,85,84);margin-bottom:8px;}
+.blog.list .post .item .newwindow {
   display: inline-block;
   min-height: 10px;
   padding: 0 18px 0 0px;
@@ -64,14 +67,14 @@ footer .wrap {max-width:1024px;margin:0 auto;}
   background: url(../img/newwindow-icon.png) no-repeat right center;
   vertical-align: middle;
 }
-.blog .post.list .item p.meta {}
-.blog .post.list .item p.summary {margin:8px 0;}
+.blog.list .post .item p.meta {}
+.blog.list .post .item p.summary {margin:8px 0;}
 
-.blog .post.read {padding:48px 8px;}
-.blog .post.read h1.title {font-size:42px;}
-.blog .post.read p.meta {color:gray;margin-bottom:42px;}
+.blog.read .post {padding:48px 8px;}
+.blog.read .post h1.title {font-size:42px;}
+.blog.read .post p.meta {color:gray;margin-bottom:42px;}
 
-.blog .post.read .content {}
+.blog.read .post .content {}
 
 .markdown-body {font-size:16px;line-height:1.4em;word-break:break-word;}
 .markdown-body h1 {font-size:200%;margin-top:1.5em;margin:1.5em 0px 0.67em;}
