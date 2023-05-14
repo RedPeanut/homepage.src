@@ -4,19 +4,34 @@ import moment from 'moment'
 // import ReadNext from '../components/ReadNext'
 
 class MarkdownWrapper extends React.Component {
+
+  componentDidMount() {
+    const post = document.querySelector(".post .content");
+    const headings = Array.from(
+      post.querySelectorAll("h1,h2,h3,h4,h5,h6")
+    ).filter(h => h.id);
+    const toc = document.querySelector(".post.toc");
+    //new ScrollSpy(toc, headings);
+  }
+
   render () {
     // console.log('render() is called...');
     const { route } = this.props
     // console.log('this.props = ', this.props);
     const post = route.page.data
     // console.log('post = ', post);
-    const { title, insert, body } = post
+    const { title, insert, body, tableOfContents } = post
 
     return (
       // <MainLayout index={markdownRemark.frontmatter.category == 'gallery' ? 2 : 1}>
         <div className="blog read">
           <div className="wrap">
             <div className="left category list"></div>
+            <div className="toc">
+              <div className=""
+                dangerouslySetInnerHTML={{ __html: tableOfContents }}
+              />
+            </div>
             <div className="post">
               <h1 className="title">{title}</h1>
               {/* <p className="meta">{date} • {timeToRead}분</p> */}
