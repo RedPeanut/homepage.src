@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "yarn run start_dev",
-    "start_dev": "NODE_ENV=development webpack-dev-server --progress --env dev --colors",
-    "start_prod": "NODE_ENV=production webpack-dev-server --progress --env prod --colors",
-    "build": "yarn run build_dev",
-    "build_dev": "rm -rf dev && NODE_ENV=development webpack --env dev --progress --color",
-    "build_prod": "rm -rf prod && NODE_ENV=production webpack --env prod --progress --color",
-    "publish": "yarn run build_prod && ts-node scripts/publish.ts"
+    "start": "yarn run start:dev",
+    "start:dev": "NODE_ENV=development webpack-dev-server --progress --env dev --colors",
+    "start:prod": "NODE_ENV=production webpack-dev-server --progress --env prod --colors",
+    "build": "yarn run build:dev",
+    "build:dev": "rm -rf dev && NODE_ENV=development webpack --env dev --progress --color",
+    "build:prod": "rm -rf prod && NODE_ENV=production webpack --env prod --progress --color",
+    "publish": "yarn run build:prod && ts-node scripts/publish.ts"
   },
   "keywords": [],
   "author": "",
