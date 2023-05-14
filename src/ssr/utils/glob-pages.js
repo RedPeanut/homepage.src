@@ -47,9 +47,11 @@ function createCache(directory, callback) {
       postsData.push(buildPage(directory, post))
     })
 
-    const resultData = postsData.filter(item => 
-      item.file.basename != 'sample.md'
-    )
+    const resultData = 
+      process.env.NODE_ENV === 'production'
+      ? postsData.filter(item => 
+        item.file.basename !== 'sample.md'
+      ) : postsData;
     // console.log();
     // console.log('resultData = ', resultData);
     
