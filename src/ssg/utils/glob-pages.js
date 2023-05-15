@@ -1,7 +1,7 @@
 const glob = require('glob');
 const buildPage = require('./build-page');
 // const pageFileTypes = require('./page-file-types');
-const debug = require('debug')('ssr:glob');
+const debug = require('debug')('ssg:glob');
 
 const pageFileTypes = [
   'coffee',
