@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from "react-router";
 import moment from 'moment'
 // import { Link } from 'gatsby'
 
@@ -45,7 +44,7 @@ function PostListItem({
   } else {
     return (
       <li className="item">
-        <Link to={'/'+page.path} className="">
+        <a href={'#/'+page.path} className="">
           <h2 className="title">{page.data.title}</h2>
           <p className="timestamp">{moment(page.data.insert).format('YYYY년 MM월 DD일')}</p>
           {/* <p className="meta"></p> */}
@@ -56,7 +55,7 @@ function PostListItem({
               </p>
             )
           }
-        </Link>
+        </a>
       </li>
     )
   }
