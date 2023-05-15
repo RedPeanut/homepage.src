@@ -39,14 +39,14 @@ const common = merge([
 
       // Hierarchy of directories for Webpack to look for module.
       // First is the site directory.
-      // Then in the special directory of isomorphic modules ssr ships with.
+      // Then in the special directory of isomorphic modules ssg ships with.
       // Then the site's node_modules directory
 
       // Alias for typescript, see: https://github.com/gaearon/react-hot-loader/issues/417#issuecomment-261548082
       alias: { 'react/lib/ReactMount': 'react-dom/lib/ReactMount' },
       modules: [
         path.resolve(__dirname, 'src/app'),
-        path.resolve(__dirname, 'src/ssr/isomorphic'),
+        path.resolve(__dirname, 'src/ssg/isomorphic'),
         'node_modules'
       ],
     },
@@ -54,7 +54,7 @@ const common = merge([
     resolveLoader: {
       // Hierarchy of directories for Webpack to look for loaders.
       modules: [
-        path.resolve(__dirname, 'src/ssr/loaders'),
+        path.resolve(__dirname, 'src/ssg/loaders'),
         path.resolve(__dirname, 'node_modules'),
       ],
     },
