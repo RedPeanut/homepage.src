@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {IndexRoute, Route, Router, Routes, useRouterHistory, BrowserRouter} from "react-router";
+import {IndexRoute, Route, Router, Routes, useRouterHistory, BrowserRouter, browserHistory} from "react-router";
 import {Provider} from "react-redux";
 import configureStore from "./store/configureStore";
 import {createHashHistory} from "history";
@@ -73,7 +73,7 @@ loadSeed(() => {
       const Root = () => (
         <Provider store={store}>
           <Router 
-            history={history}
+            history={browserHistory}
             onUpdate={handleRouterUpdate}
           >
             <Route path="/"
