@@ -20,7 +20,7 @@ Node로는 커맨드라인 툴을 작성해보면서 Node가 가지고 성능을
 
 ## TODO (-:예정,>:진행중,v:완료,x:삭제,?:미정)
 1. 블로그 개선
-- ```>``` 트래커 구현: v ast, v auto link headers, v 스타일링(flex), > remove hashbang
+- v 트래커 구현: v ast, v auto link headers, v 스타일링(flex), v remove hashbang
 - v sample.md 제외 처리
 1. 토렌트,DHT 
 - peer 찾는 동작 부터 차근차근
