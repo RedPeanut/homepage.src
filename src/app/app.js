@@ -66,7 +66,8 @@ loadSeed(() => {
         // console.log('routes = ', routes);
       } else
         createRoutes(posts, context);
-      console.log('routes = ', routes);
+      
+      if(process.env.NODE_ENV === 'development') console.log('routes = ', routes);
       
       // let {path, component, childRoutes, indexRoute, pages, templates} = routes;
 
