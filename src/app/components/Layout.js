@@ -1,4 +1,5 @@
 import React, {} from "react"
+import {Link} from "react-router";
 import "../../www/css/style.css"
 import Icon from "./Icon"
 import ICONS from "../utils/icons"
@@ -38,14 +39,27 @@ export class MainLayout extends React.Component {
           <header>
             <div className="wrap">
               <h1>
-                <a className="" href="#/">김진규블로그</a>
+                {/* <a className="" href="#/">김진규블로그</a> */}
+                <Link to="/" className="">김진규블로그</Link>
               </h1>
               <nav>
                 <ul>
-                  <li><a href="#/about" className={endpoint === null || endpoint === '' || endpoint === 'about' ? 'active' : ''}>About</a></li>
-                  <li><a href="#/blog" className={endpoint === 'blog' ? 'active' : ''}>Blog</a></li>
-                  <li><a href="#/gallery" className={endpoint === 'gallery' ? 'active' : ''}>Gallery</a></li>
-                  <li><a href="#/tools" className={endpoint === 'tools' ? 'active' : ''}>Tools</a></li>
+                  <li>
+                    {/* <a href="#/about" className={endpoint === null || endpoint === '' || endpoint === 'about' ? 'active' : ''}>About</a> */}
+                    <Link to="/about" className={endpoint === null || endpoint === '' || endpoint === 'about' ? 'active' : ''}>About</Link>
+                  </li>
+                  <li>
+                    {/* <a href="#/blog" className={endpoint === 'blog' ? 'active' : ''}>Blog</a> */}
+                    <Link to="/blog" className={endpoint === 'blog' ? 'active' : ''}>Blog</Link>
+                  </li>
+                  <li>
+                    {/* <a href="#/gallery" className={endpoint === 'gallery' ? 'active' : ''}>Gallery</a> */}
+                    <Link to="/gallery" className={endpoint === 'gallery' ? 'active' : ''}>Gallery</Link>
+                  </li>
+                  <li>
+                    {/* <a href="#/tools" className={endpoint === 'tools' ? 'active' : ''}>Tools</a> */}
+                    <Link href="/tools" className={endpoint === 'tools' ? 'active' : ''}>Tools</Link>
+                  </li>
                 </ul>
               </nav>
               <ul className="contacts">

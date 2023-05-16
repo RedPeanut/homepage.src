@@ -11,6 +11,7 @@ const common = merge([
       app: ['babel-polyfill', path.resolve(__dirname, 'src/app/app.js')]
     },
     output: {
+      publicPath: '/',
       path: path.resolve(__dirname, process.env.NODE_ENV === 'production' ? 'prod' : 'dev'),
       filename: '[name].js',
       chunkFilename: '[name].js',
@@ -155,6 +156,7 @@ function development(env) {
     common,
     {
       devServer: {
+        historyApiFallback: true,
         contentBase: 'src/www',
         hot: true,
         stats: 'errors-only',
