@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 
 const common = merge([
   {
@@ -28,6 +29,9 @@ const common = merge([
           'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }
       }),
+      new WebpackShellPlugin({
+        onBuildEnd: 'node scripts/copy-index-to-404.js'
+      })
     ],
     node: {
       fs: 'empty',
