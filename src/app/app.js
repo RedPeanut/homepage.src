@@ -81,6 +81,7 @@ loadSeed(() => {
               getComponent={(location, cb) => {
                 load(System.import('./components/Layout'), cb)
               }}
+              pages={routes.pages}
             >
               <Route path="about"
                 getComponent={(location, cb) => {
