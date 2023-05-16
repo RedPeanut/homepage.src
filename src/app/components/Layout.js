@@ -31,7 +31,7 @@ export class MainLayout extends React.Component {
 
     // console.log('this.props = ', this.props);
     // let {index} = this.props;
-    let endpoint = this.props.location.pathname.split('/')[1];
+    let endpoint = this.props.location ? this.props.location.pathname.split('/')[1] : '';
     // console.log('endpoint = ', endpoint);
 
     return (

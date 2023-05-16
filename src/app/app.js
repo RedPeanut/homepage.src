@@ -81,10 +81,6 @@ loadSeed(() => {
                 load(System.import('./components/Layout'), cb)
               }}
             >
-              <Route path="404"
-                getComponent={(location, cb) => {
-                  load(System.import('./pages/404'), cb)
-                }}/>
               <Route path="about"
                 getComponent={(location, cb) => {
                   load(System.import('./pages/about'), cb)
@@ -114,6 +110,10 @@ loadSeed(() => {
               pages={routes.pages}
               templates={routes.templates}
             />
+            <Route path="*"
+              getComponent={(location, cb) => {
+                load(System.import('./pages/404'), cb)
+              }}/>
           </Router>
         </Provider>
       );

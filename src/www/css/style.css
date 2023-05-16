@@ -36,7 +36,7 @@ footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(
 footer .wrap {max-width:1024px;margin:0 auto;}
 
 ._404 {margin:0 auto;height:100%;max-width:800px;}
-._404 section {padding:48px 8px;}
+._404 section {padding:48px 8px;text-align:center;}
 ._404 section h1 {font-size:2em;margin:0.67em 0px;}
 ._404 section p {}
 
