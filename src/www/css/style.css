@@ -55,9 +55,15 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .blog {}
 .blog .wrap {
   max-width:1024px;margin:0 auto;
-  display:flex;
-  align-items: flex-start;
 }
+
+@media (min-width: 1300px) {
+  .blog .wrap {
+    display:flex;
+    align-items: flex-start;
+  }
+}
+
 .blog.list .post {order:0;}
 .blog.list .post .item {margin:56px 0;}
 .blog.list .post .item h2 {color:rgb(205,85,84);margin-bottom:8px;}
@@ -77,20 +83,28 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .blog.read .post h1.title {font-size:42px;}
 .blog.read .post p.meta {color:gray;margin-bottom:42px;}
 .blog.read .post .content {}
+
 .blog.read .toc {
-  order: 1;
-  width: 224px; /* 18rem */
-  position: sticky;
-  top: 8px; /* 10rem */
-  /* max-height: calc(((100vh - 7rem) - 3rem) - 3rem); */
-  padding: 0 8px;
-  overflow: auto;
-  flex-shrink: 0;
-  border-left: 2px solid rgb(230,230,230);
-  line-height:1.15;
-  /* color: #3d3d3f; */
-  margin-left: 12px;
+  margin-bottom:32px;
+  padding:0 24px;
 }
+
+
+@media (min-width: 1300px) {
+  .blog.read .toc {
+    order: 1;
+    width: 224px;
+    position: sticky;
+    top: 8px;
+    padding: 0 8px;
+    overflow: auto;
+    flex-shrink: 0;
+    border-left: 2px solid rgb(230,230,230);
+    line-height:1.15;
+    margin-left: 12px;
+  }
+}
+
 .blog.read .toc ul {
   padding-left: 8px;
   list-style: none;
@@ -102,7 +116,10 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 
 .blog .toc ul li a {
   color: #888;
-  font-size: 12px;
+}
+
+@media (min-width: 1300px) {
+  .blog .toc ul li a {font-size:12px;}
 }
 
 .markdown-body {font-size:16px;line-height:1.4em;word-break:break-word;}
