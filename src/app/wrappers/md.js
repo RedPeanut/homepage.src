@@ -27,11 +27,15 @@ class MarkdownWrapper extends React.Component {
         <div className="blog read">
           <div className="wrap">
             <div className="left category list"></div>
-            <div className="toc">
-              <div className=""
-                dangerouslySetInnerHTML={{ __html: tableOfContents }}
-              />
-            </div>
+            {
+              tableOfContents ? 
+              <div className="toc">
+                <h2>Table of Contents</h2>
+                <div className=""
+                  dangerouslySetInnerHTML={{ __html: tableOfContents }}
+                />
+              </div> : ''
+            }
             <div className="post">
               <h1 className="title">{title}</h1>
               {/* <p className="meta">{date} • {timeToRead}분</p> */}

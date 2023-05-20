@@ -92,6 +92,12 @@ footer .wrap {max-width:1024px;margin:0 auto;}
   padding:0 24px;
 }
 
+.blog.read .toc h2 {
+  font-size:14px;
+  color:#888;
+  /* font-weight:bold; */
+  margin-bottom:12px;
+}
 
 @media (min-width: 1300px) {
   .blog.read .toc {
@@ -105,6 +111,9 @@ footer .wrap {max-width:1024px;margin:0 auto;}
     border-left: 2px solid rgb(230,230,230);
     line-height:1.15;
     margin-left: 12px;
+  }
+  .blog.read .toc h2 {
+    margin-bottom:12px;
   }
 }
 
