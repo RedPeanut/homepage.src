@@ -13,7 +13,7 @@ class Blog extends React.Component {
 
   render() {
 
-    console.log('this.props = ', this.props);
+    if(process.env.NODE_ENV === 'development') console.log('this.props = ', this.props);
     const pages = this.props.pages ? this.props.pages : this.props.route.pages;
     const path = this.props.route.path === '' || this.props.route.path === '/' ? 'blog' : this.props.route.path;
     const sortedPages = _.sortBy(pages, 'data.insert').reverse();
