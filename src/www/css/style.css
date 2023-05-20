@@ -29,6 +29,8 @@ header ul.contacts li a svg {fill:#222;}
 header ul.contacts li a:hover svg {fill:#5d93ff;}
 
 @media (max-width:768px) {
+  header {padding:0 4px;}
+  header nav {margin-left:0px;}
   header ul.contacts {display:none;}
 }
 
