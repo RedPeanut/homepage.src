@@ -82,7 +82,7 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .blog.list .post .item p.summary {margin:8px 0;}
 
 .blog.read .wrap {margin:48px auto;}
-.blog.read .post {order:0;padding:0 24px;min-width:768px;}
+.blog.read .post {order:0;padding:0 24px;}
 .blog.read .post h1.title {font-size:42px;}
 .blog.read .post p.meta {color:gray;margin-bottom:42px;}
 .blog.read .post .content {}
@@ -100,6 +100,7 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 }
 
 @media (min-width: 1300px) {
+  .blog.read .post {min-width:768px;}
   .blog.read .toc {
     order: 1;
     width: 224px;
