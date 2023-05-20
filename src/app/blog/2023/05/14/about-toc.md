@@ -8,7 +8,7 @@ tags: [TOC]
 ---
 
 # 내용
-의외로 힘들었다. 우선 마크다운에서 헤딩에 대한 정보를 추출하는 라이브러리가 필요할지도 몰랐다. 개츠비에 이미 구현된 내용이 있어서 그대로 카피했다.(<a href="https://www.npmjs.com/package/remark" target="_blank">remark</a>, <a href="https://github.com/syntax-tree" target="_blank">mdast 유틸군</a> 라이브러리 추가, AST(Abstract Syntax Tree) 개념 및 동작파악 등은 스킵(별로 관심 없다))
+의외로 힘들었다. 우선 마크다운에서 헤딩에 대한 정보를 추출하는 라이브러리가 필요할지도 몰랐다. 개츠비에 이미 구현된 내용이 있어서 그대로 카피했다.(<a href="https://www.npmjs.com/package/remark" target="_blank">remark</a>, <a href="https://github.com/syntax-tree" target="_blank">mdast 유틸군</a> 라이브러리 추가, AST(Abstract Syntax Tree) 개념 또는 기술 파악 등은 스킵(별로 관심 없다))
 
 TOC와 헤딩에 대한 연결 동작을 위해 변환된 헤딩(h1,h2,h3,...)에 id를 삽입해 줄 필요가 있었다. 이미 개츠비에서 autolink-headers라는 기능으로 제공해주고 있었고 역시 그대로 카피했다. 이 부분에서도 <a href="https://github.com/syntax-tree" target="_blank">mdast 라이브러리</a>(<a href="https://github.com/RedPeanut/redpeanut.github.io.src/commit/cdf749f" target="_blank">cdf749f</a>)가 관여한다.
 
@@ -29,3 +29,5 @@ TOC와 헤딩에 대한 연결 동작을 위해 변환된 헤딩(h1,h2,h3,...)�
 - 포스트 작성
 1. vscode
 - 개인적으로 너무너무 물고,뜯고,맛보고 싶은 앱이다.
+1. about 페이지 삭제 (너무 개인정보인듯) -> resume 페이지를 만들거나 또는 옆으로 빼기
+- v 일단 제일 우측으로 이동
