@@ -117,10 +117,17 @@ class ColorConverter extends React.Component {
     <div className="w3-container w3-padding-large ws-grey" style={{borderRadius:"5px"}}>
       <div className="w3-row">
         <div className="w3-col l6">
-          <h2>Enter a Color:</h2>
-          <label><span className="xw3-text-grey"><i>name, hex, rgb, hsl, hwb, cmyk, ncol:</i></span></label>
-          <input ref="color01" id="color01" type="text" value={this.state.color01 || ""}  className="w3-input w3-border"
-            onChange={this.onChangeColor01} onKeyDown={this.onKeyDownColor01}/>
+          <div className="top">
+            <div className="wrap">
+              <h2>Enter a Color:</h2>
+              <div id="behindresult01" className="">
+                <div style={{backgroundColor:"rgb(0, 191, 255)"}} id="result01">&nbsp;</div>
+              </div>
+            </div>
+            <label><span className="xw3-text-grey"><i>name, hex, rgb, hsl, hwb, cmyk, ncol:</i></span></label>
+            <input ref="color01" id="color01" type="text" value={this.state.color01 || ""}  className="w3-input w3-border"
+              onChange={this.onChangeColor01} onKeyDown={this.onKeyDownColor01}/>
+          </div>
           <br/>
           <div className="resultStrings">
             <div id="error01"></div>
@@ -166,11 +173,11 @@ class ColorConverter extends React.Component {
             </table>
           </div>
         </div>
-        <div className="w3-col l6" style={{padding:"40px 40px 10px 40px"}}>
+        {/* <div className="w3-col l6" style={{padding:"40px 40px 10px 40px"}}>
           <div id="behindresult01">
             <div style={{height:"294px", backgroundColor:"rgb(0, 191, 255)"}} id="result01">&nbsp;</div>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <div className="w3-row">
         <div className="w3-col">

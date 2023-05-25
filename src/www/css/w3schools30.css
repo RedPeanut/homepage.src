@@ -125,3 +125,13 @@
   width:100%;
 }
 /*input[type=search]::-webkit-search-cancel-button{-webkit-appearance:searchfield-cancel-button;}*/
+
+.w3-container .top .wrap {position:relative;}
+.w3-container .top h2 {display:inline-block;}
+.w3-container .top #behindresult01 {
+  display:inline-block;
+  position:absolute;
+  top:6px;
+  margin-left:8px;
+  width:19px;
+}
