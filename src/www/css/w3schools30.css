@@ -36,7 +36,6 @@
   color: white!important;
 }
 
-
 .ws-grey {
   background-color:#E7E9EB!important;
   color: black!important;
@@ -124,6 +123,7 @@
   border-spacing:2px;
   width:100%;
 }
+
 /*input[type=search]::-webkit-search-cancel-button{-webkit-appearance:searchfield-cancel-button;}*/
 
 .w3-container .top .wrap {position:relative;}

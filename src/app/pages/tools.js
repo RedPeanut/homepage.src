@@ -41,15 +41,15 @@ const TOOLS = [
     category: "category",
     items: [
       { 
-        label: "Tool1 Category", 
+        label: "Tool1", 
         module: "tool1",
       },
       {
-        label: "Tool2 Category", 
+        label: "Tool2", 
         module: "tool2",
       },
       {
-        label: "Tool3 Category", 
+        label: "Tool3", 
         module: "tool3",
       },
     ]
