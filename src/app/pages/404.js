@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { PlainLayout, MainLayout } from "../components/Layout"
 
 const NotFoundPage = () => (
-  // <MainLayout>
+  <MainLayout>
     <div>
       <Helmet title="404: Not found"/>
       <div className="_404">
@@ -13,7 +13,7 @@ const NotFoundPage = () => (
         </section>
       </div>
     </div>
-  // </MainLayout>
+  </MainLayout>
 )
 
 export default NotFoundPage
