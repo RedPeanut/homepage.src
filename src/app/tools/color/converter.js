@@ -114,7 +114,7 @@ class ColorConverter extends React.Component {
   render() {
 
     return (
-      <div className="w3-container w3-padding-large ws-grey" style={{borderRadius:"5px"}}>
+      <div className="w3-container w3-padding-large ws-grey" style={{/* borderRadius:"5px" */}}>
         <div className="w3-row">
           <div className="w3-col l6">
             <div className="top">
