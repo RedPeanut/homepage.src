@@ -5,14 +5,18 @@ import {Provider} from "react-redux";
 import configureStore from "./store/configureStore";
 import {createHashHistory} from "history";
 
-//
-import load from "./utils/load";
+// import load from "./utils/load";
+// import DebugRouter from "./router/DebugRouter";
+
+import Layout from "./components/Layout"
+import About from "./pages/about"
+import Blog from "./pages/blog"
+import Tools from "./pages/tools"
+import NotFoundPage from "./pages/404"
 
 const globals = require("./config/" + process.env.NODE_ENV + "/globals");
 const store = configureStore();
 const history = useRouterHistory(createHashHistory)({queryKey: false});
-
-import DebugRouter from "./router/DebugRouter";
 
 window.onload = function() {}
 window.onerror = function(messageOrEvent, source, lineNo, columnNo, error) {}
@@ -77,32 +81,11 @@ loadSeed(() => {
             history={browserHistory}
             onUpdate={handleRouterUpdate}
           >
-            <Route path="/"
-              getComponent={(location, cb) => {
-                load(System.import('./components/Layout'), cb)
-              }}
-              pages={routes.pages}
-            >
-              <Route path="about"
-                getComponent={(location, cb) => {
-                  load(System.import('./pages/about'), cb)
-                }}/>
-              <Route path="blog" 
-                getComponent={(location, cb) => {
-                  load(System.import('./pages/blog'), cb)
-                }}
-                pages={routes.pages}
-              />
-              <Route path="gallery" 
-                getComponent={(location, cb) => {
-                  load(System.import('./pages/blog'), cb)
-                }}
-                pages={routes.pages}
-              />
-              <Route path="tools" 
-                getComponent={(location, cb) => {
-                  load(System.import('./pages/tools'), cb)
-                }}/>
+            <Route path="/" component={Layout} pages={routes.pages}>
+              <Route path="about" component={About}/>
+              <Route path="blog" component={Blog} pages={routes.pages}/>
+              <Route path="gallery" component={Blog} pages={routes.pages}/>
+              <Route path="tools" component={Tools}/>
             </Route>
             <Route 
               path={routes.path}
@@ -112,10 +95,7 @@ loadSeed(() => {
               pages={routes.pages}
               templates={routes.templates}
             />
-            <Route path="*"
-              getComponent={(location, cb) => {
-                load(System.import('./pages/404'), cb)
-              }}/>
+            <Route path="*" component={NotFoundPage}/>
           </Router>
         </Provider>
       );
