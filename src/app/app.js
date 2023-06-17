@@ -85,7 +85,7 @@ loadSeed(() => {
               <Route path="about" component={About}/>
               <Route path="blog" component={Blog} pages={routes.pages}/>
               <Route path="gallery" component={Blog} pages={routes.pages}/>
-              <Route path="tools" component={Tools}/>
+              {/* <Route path="tools" component={Tools}/> */}
             </Route>
             <Route 
               path={routes.path}

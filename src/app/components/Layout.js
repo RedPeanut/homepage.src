@@ -51,9 +51,9 @@ export class MainLayout extends React.Component {
                   <li>
                     <Link to="/gallery" className={endpoint === 'gallery' ? 'active' : ''}>Gallery</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/tools" className={endpoint === 'tools' ? 'active' : ''}>Tools</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="/about" className={endpoint === 'about' ? 'active' : ''}>About</Link>
                   </li>
