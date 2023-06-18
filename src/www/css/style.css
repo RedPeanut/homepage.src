@@ -137,6 +137,11 @@ footer .wrap {max-width:1024px;margin:0 auto;}
   color: #888;
 }
 
+.blog .toc ul li a.active {
+  color: #3d3d3f;
+  font-weight: bold;
+}
+
 @media (min-width: 1300px) {
   .blog .toc ul li a {font-size:12px;}
 }

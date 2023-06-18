@@ -2,16 +2,21 @@ import React from 'react'
 import moment from 'moment'
 // import Helmet from "react-helmet"
 // import ReadNext from '../components/ReadNext'
+import ScrollSpy from './scroll-spy';
 
 class MarkdownWrapper extends React.Component {
 
   componentDidMount() {
-    const post = document.querySelector(".post .content");
+    const content = document.querySelector(".blog .content");
     const headings = Array.from(
-      post.querySelectorAll("h1,h2,h3,h4,h5,h6")
+      content.querySelectorAll("h1,h2,h3,h4,h5,h6")
     ).filter(h => h.id);
-    const toc = document.querySelector(".post.toc");
-    //new ScrollSpy(toc, headings);
+    const toc = document.querySelector(".blog .toc");
+    // console.log('content = ', content);
+    console.log('headings = ', headings);
+    console.log('toc = ', toc);
+    if(headings && toc)
+      new ScrollSpy(toc, headings);
   }
 
   render () {
