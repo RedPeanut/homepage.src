@@ -39,7 +39,7 @@ class MarkdownWrapper extends React.Component {
             <div className="post">
               <h1 className="title">{title}</h1>
               {/* <p className="meta">{date} • {timeToRead}분</p> */}
-              <p className="meta">{moment(insert).format('YYYY년 MM월 DD일')}</p>
+              <p className="meta">{moment.utc(insert).format('YYYY년 MM월 DD일')}</p>
               <div className="content markdown-body"
                 dangerouslySetInnerHTML={{ __html: body }}
               />

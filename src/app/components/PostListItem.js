@@ -38,7 +38,7 @@ function PostListItem({
           <h2 className="title">{page.data.title}
             <span className="newwindow"></span>
           </h2>
-          <p className="timestamp">{moment(page.data.insert).format('YYYY년 MM월 DD일')}</p>
+          <p className="timestamp">{moment.utc(page.data.insert).format('YYYY년 MM월 DD일')}</p>
         </a>
       </li>
     )
@@ -47,7 +47,7 @@ function PostListItem({
       <li className="item">
         <Link to={'/'+page.path} className="">
           <h2 className="title">{page.data.title}</h2>
-          <p className="timestamp">{moment(page.data.insert).format('YYYY년 MM월 DD일')}</p>
+          <p className="timestamp">{moment.utc(page.data.insert).format('YYYY년 MM월 DD일')}</p>
           {/* <p className="meta"></p> */}
           {
             page.data.excerpt && (
