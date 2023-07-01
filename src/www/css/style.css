@@ -133,17 +133,20 @@ footer .wrap {max-width:1024px;margin:0 auto;}
   margin-bottom: 4px;
 }
 
-.blog .toc ul li a {
+.blog .toc a {
   color: #888;
 }
 
-.blog .toc ul li a.active {
+.blog .toc a.active,
+.blog .toc a:hover {
   color: #3d3d3f;
-  font-weight: bold;
+  font-weight: 800;
+  /* transition: all 0.25s ease 0s;
+  transform: scale(1.1); */
 }
 
 @media (min-width: 1300px) {
-  .blog .toc ul li a {font-size:12px;}
+  .blog .toc a {font-size:12px;}
 }
 
 .markdown-body {font-size:16px;line-height:1.4em;word-break:break-word;}
