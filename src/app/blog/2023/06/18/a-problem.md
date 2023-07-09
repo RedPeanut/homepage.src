@@ -37,7 +37,7 @@ webpack-dev-server 코드도 한번 훑어보는 시간을 가질수 있었는�
 # TODO
 이번 TODO는 이전과 유사하다. 갑자기 광고 떡칠한 툴싸이트들 보고 필받아 툴페이지 만드는데 시간을 많이 할애했다. 아직 쓸만해지려면 훨씬 더 꾸며야 하지만...
 
-1. stock: finance guide 버전 만들어보기
-1. 툴s: Buy a coffee
+1. ```-``` stock: finance guide 버전 만들어보기
+1. ```-``` 툴s: Buy a coffee, HTML 태그제거기
 1. 토렌트: 시각화
 1. 포스트: DIFF,DHT
