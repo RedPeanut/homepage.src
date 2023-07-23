@@ -13,13 +13,13 @@ class MarkdownWrapper extends React.Component {
     ).filter(h => h.id);
     const toc = document.querySelector(".blog .toc");
     // console.log('content = ', content);
-    console.log('headings = ', headings);
-    console.log('toc = ', toc);
+    // console.log('headings = ', headings);
+    // console.log('toc = ', toc);
     if(headings && toc)
       new ScrollSpy(toc, headings);
   }
 
-  render () {
+  render() {
     // console.log('render() is called...');
     const { route } = this.props
     // console.log('this.props = ', this.props);

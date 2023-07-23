@@ -1,26 +1,30 @@
 export default class ScrollSpy {
   
-    constructor(target, refs, sensitivity) {
-      this.targets = Array.from(target.querySelectorAll("a"));
-      this.refs = refs;
+    constructor(tableOfContents, contentHeadings, sensitivity) {
+      this.tableOfContents = Array.from(tableOfContents.querySelectorAll("a"));
+      this.contentHeadings = contentHeadings;
       this.sensitivity = sensitivity || -10;
         window.addEventListener("scroll", () => this.onScroll());
     }
   
     onScroll() {
-      if (!this.isOnTopOfDoc(this.refs[0])) {
-        this.deactiveateTarget();
-      }
-  
-      this.refs.forEach(ref => {
-        if (this.isOnTopOfDoc(ref)) {
-          this.deactiveateTarget();
-          const t = this.findTarget(ref.id);
-          if (t) {
+      let _ref = null;
+      this.contentHeadings.forEach(ref => {
+        if(this.isOnTopOfDoc(ref)) {
+          _ref = ref;
+        }
+      });
+
+      if(_ref != null) {
+        const t = this.findTarget(_ref.id);
+        if(t) {
+          if(!t.classList.contains("active")) {
+            this.deactiveateTargets();
             this.activate(t);
           }
         }
-      })
+      } else
+        this.deactiveateTargets();
     }
   
     isOnTopOfDoc(ref) {
@@ -29,12 +33,12 @@ export default class ScrollSpy {
       )
     }
   
-    deactiveateTarget() {
-      this.targets.forEach(a => this.deactivate(a));
+    deactiveateTargets() {
+      this.tableOfContents.forEach(a => this.deactivate(a));
     }
   
     findTarget(id) {
-      return this.targets.filter(
+      return this.tableOfContents.filter(
         a =>
           decodeURIComponent(a.attributes["href"].value.replace(/^#/, "")) === id
       )[0];
