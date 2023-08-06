@@ -41,7 +41,12 @@ export class MainLayout extends React.Component {
             <div className="wrap">
               <h1>
                 {/* <a className="" href="#/">김진규블로그</a> */}
-                <Link to="/" className="">김진규블로그</Link>
+                <Link to="/" className="">
+                  <span className="text">김진규블로그</span>
+                  <span className="icon material-symbols-outlined">
+                    house
+                  </span>
+                </Link>
               </h1>
               <nav>
                 <ul>
