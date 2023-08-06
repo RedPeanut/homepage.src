@@ -56,9 +56,12 @@ export class MainLayout extends React.Component {
                   <li>
                     <Link to="/gallery" className={endpoint === 'gallery' ? 'active' : ''}>Gallery</Link>
                   </li>
-                  {/* <li>
-                    <Link href="/tools" className={endpoint === 'tools' ? 'active' : ''}>Tools</Link>
-                  </li> */}
+                  <li>
+                    <a className="" href="https://baekwon10000.github.io" title="Tools" target="_blank">Tools
+                      <span className="newwindow"></span>
+                    </a>
+                    {/* <Link href="/tools" className={endpoint === 'tools' ? 'active' : ''}>Tools</Link> */}
+                  </li>
                   <li>
                     <Link to="/about" className={endpoint === 'about' ? 'active' : ''}>About</Link>
                   </li>

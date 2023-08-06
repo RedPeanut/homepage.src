@@ -76,7 +76,7 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 }
 .blog.list .post .item {margin:56px 0;}
 .blog.list .post .item h2 {color:rgb(205,85,84);margin-bottom:8px;}
-.blog.list .post .item .newwindow {
+.blog.list .post .item .newwindow, header .newwindow {
   display: inline-block;
   min-height: 10px;
   padding: 0 18px 0 0px;
