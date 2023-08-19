@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn run start:dev",
-    "start:dev": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.tobe.js",
     "start:prod": "yarn build:prod && cd prod && http-server",
     "build": "yarn run build:dev",
-    "build:dev": "rm -rf dev && NODE_ENV=development webpack --config config/webpack.dev.js",
-    "build:prod": "rm -rf prod && NODE_ENV=production webpack --config config/webpack.prod.js",
+    "build:dev": "rm -rf dev && NODE_ENV=development webpack --config webpack.config.tobe.js",
+    "build:prod": "rm -rf prod && NODE_ENV=production webpack --config webpack.config.tobe.js",
     "publish": "yarn run build:prod && ts-node scripts/publish.ts"
   },
   "keywords": [],
@@ -39,6 +39,7 @@
     "html-frontmatter": "1.6.0",
     "html-webpack-plugin": "5.5.0",
     "http-server": "14.1.1",
+    "mini-css-extract-plugin": "2.6.1",
     "jquery": "2.2.3",
     "jquery.cookie": "1.4.1",
     "mdast-util-to-hast": "10.2.0",
