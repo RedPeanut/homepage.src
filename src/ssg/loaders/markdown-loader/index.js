@@ -98,7 +98,7 @@ module.exports = function(content) {
   // console.log('markdown-loader() is called...')
   this.cacheable()
 
-  const query = loaderUtils.parseQuery(this.query)
+  // const query = loaderUtils.parseQuery(this.query)
   /* const linkPrefix = (query.config && query.config.linkPrefix) || ''
   const shouldPrefix = query.shouldPrefix
 

@@ -27,7 +27,7 @@ function handleRouterUpdate() {
 
 function loadSeed(cb) {
   // console.log('loadSeed() is called...');
-  const stuff = require('seed');
+  const stuff = require('seed.toml');
   // console.log('stuff = ', stuff);
   // console.log('module.hot = ', module.hot);
   if(module.hot) {
@@ -63,7 +63,7 @@ let routes;
 loadSeed(() => {
   loadContext(
     (context) => {
-      const { posts } = require('seed');
+      const { posts } = require('seed.toml');
 
       if(!routes) {
         routes = createRoutes(posts, context);

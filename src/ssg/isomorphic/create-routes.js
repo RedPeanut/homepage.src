@@ -19,7 +19,8 @@ function requireComponent(moduleReq) {
   return module
 }
 
-module.exports = (files, context) => {
+// module.exports = (files, context) => {
+export default (files, context) => {
   // Remove files that start with an underscore as this indicates
   // the file shouldn't be turned into a page.
   const pages = filter(files, file => file.file.name.slice(0, 1) !== '_')
