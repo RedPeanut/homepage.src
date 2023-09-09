@@ -9,9 +9,9 @@ import {createHashHistory} from "history";
 // import DebugRouter from "./router/DebugRouter";
 
 import Layout from "./components/Layout"
-import About from "./pages/about"
-import Blog from "./pages/blog"
-import Tools from "./pages/tools"
+import About from "./pages/About"
+import Blog from "./pages/Blog"
+import Tools from "./pages/Tools"
 import NotFoundPage from "./pages/404"
 
 const globals = require("./config/" + process.env.NODE_ENV + "/globals");

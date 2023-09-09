@@ -2,7 +2,7 @@ import React from 'react'
 import moment from 'moment'
 // import Helmet from "react-helmet"
 // import ReadNext from '../components/ReadNext'
-import ScrollSpy from './scroll-spy';
+import ScrollSpy from './ScrollSpy';
 
 class MarkdownWrapper extends React.Component {
 

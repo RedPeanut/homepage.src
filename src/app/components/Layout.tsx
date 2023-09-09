@@ -2,9 +2,9 @@ import React, {} from "react"
 import {Link} from "react-router";
 import "../../www/css/style.css"
 import Icon from "./Icon"
-import ICONS from "../utils/icons"
-import About from "../pages/about"
-import Blog from "../pages/blog"
+import ICONS from "../utils/Icons"
+import About from "../pages/About"
+import Blog from "../pages/Blog"
 
 export class Layout extends React.Component {
   render() {
