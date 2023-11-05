@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf cache dev prod",
     "start": "yarn run start:dev",
     "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js",
     "start:prod": "yarn build:prod && cd prod && http-server",
