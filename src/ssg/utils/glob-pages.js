@@ -55,7 +55,7 @@ function createCache(directory, callback) {
     // console.log();
     // console.log('resultData = ', resultData);
     
-    debug(`globbed ${resultData.length} posts`)
+    console.log(`globbed ${resultData.length} posts`)
     globCache = resultData
     return callback(null, resultData)
   })
