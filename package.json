@@ -6,13 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf cache dev prod",
-    "start": "yarn run start:dev",
+    "start": "npm run start:dev",
     "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js",
-    "start:prod": "yarn build:prod && cd prod && http-server",
-    "build": "yarn run build:dev",
+    "start:prod": "npm build:prod && cd prod && http-server",
+    "build": "npm run build:dev",
     "build:dev": "rm -rf dev && NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "rm -rf prod && NODE_ENV=production webpack --config webpack.config.js",
-    "publish": "yarn run build:prod && ts-node scripts/publish.ts"
+    "publish": "npm run build:prod && ts-node scripts/publish.ts"
   },
   "keywords": [],
   "author": "",
